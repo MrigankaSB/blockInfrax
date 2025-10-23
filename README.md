@@ -36,11 +36,3 @@ To build a transparent and tamper-proof digital ecosystem where infrastructure p
 
 ## Contract Details: 0x957D5A343d759012605BD2A9E013CCd28a9f53b0
 <img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/1f8885b4-faf9-4adb-b48a-fdffd4946ab7" />
-
----
-
-## 🛠️ Setup & Deployment
-
-### 1️⃣ Install Dependencies
-```bash
-npm install
