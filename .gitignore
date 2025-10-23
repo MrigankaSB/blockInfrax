@@ -1,14 +1,14 @@
-# Dependencies
+# Node modules
 node_modules/
 package-lock.json
 
 # Environment variables
 .env
 
-# Hardhat build outputs
+# Hardhat build artifacts
 artifacts/
 cache/
 
-# IDE/System
+# System / IDE files
 .vscode/
 .DS_Store
