@@ -3,58 +3,61 @@ pragma solidity ^0.8.20;
 
 /**
  * @title BlockInfraX
- * @dev A decentralized infrastructure registry for tracking public projects on the blockchain.
+ * @dev A decentralized registry for managing infrastructure projects on the blockchain.
  */
 contract BlockInfraX {
-    struct Infrastructure {
+    struct Project {
         uint256 id;
         string name;
         string location;
-        address creator;
+        address owner;
     }
 
     uint256 public totalProjects;
-    mapping(uint256 => Infrastructure) public infrastructures;
+    mapping(uint256 => Project) public projects;
 
-    event InfrastructureAdded(uint256 indexed id, string name, string location, address indexed creator);
-    event OwnershipTransferred(uint256 indexed id, address indexed previousOwner, address indexed newOwner);
+    event ProjectRegistered(uint256 indexed id, string name, string location, address indexed owner);
+    event OwnershipTransferred(uint256 indexed id, address indexed oldOwner, address indexed newOwner);
 
     /**
-     * @dev Add a new infrastructure project.
-     * @param _name The name of the infrastructure project.
-     * @param _location The location of the project.
+     * @dev Register a new infrastructure project.
+     * @param _name Project name.
+     * @param _location Project location.
      */
-    function addInfrastructure(string memory _name, string memory _location) public {
+    function registerProject(string memory _name, string memory _location) public {
         totalProjects++;
-        infrastructures[totalProjects] = Infrastructure(totalProjects, _name, _location, msg.sender);
-        emit InfrastructureAdded(totalProjects, _name, _location, msg.sender);
+        projects[totalProjects] = Project(totalProjects, _name, _location, msg.sender);
+        emit ProjectRegistered(totalProjects, _name, _location, msg.sender);
     }
 
     /**
-     * @dev Transfer project ownership to a new address.
-     * @param _id The ID of the infrastructure project.
-     * @param _newOwner The address of the new owner.
+     * @dev Transfer project ownership to a new owner.
+     * @param _id Project ID.
+     * @param _newOwner Address of the new owner.
      */
     function transferOwnership(uint256 _id, address _newOwner) public {
         require(_id > 0 && _id <= totalProjects, "Invalid project ID");
-        Infrastructure storage infra = infrastructures[_id];
-        require(infra.creator == msg.sender, "Only creator can transfer");
+        Project storage proj = projects[_id];
+        require(msg.sender == proj.owner, "Only owner can transfer");
         require(_newOwner != address(0), "Invalid address");
 
-        address previousOwner = infra.creator;
-        infra.creator = _newOwner;
-
-        emit OwnershipTransferred(_id, previousOwner, _newOwner);
+        address oldOwner = proj.owner;
+        proj.owner = _newOwner;
+        emit OwnershipTransferred(_id, oldOwner, _newOwner);
     }
 
-    /**
-     * @dev Get details of an infrastructure project.
-     * @param _id The ID of the project.
-     * @return id, name, location, creator
+    /*
+     * @dev Get project details.
+     * @param _id Project ID.
+     * @return id, name, location, owner
      */
-    function getInfrastructure(uint256 _id) public view returns (uint256, string memory, string memory, address) {
+    function getProject(uint256 _id)
+        public
+        view
+        returns (uint256 id, string memory name, string memory location, address owner)
+    {
         require(_id > 0 && _id <= totalProjects, "Project does not exist");
-        Infrastructure memory infra = infrastructures[_id];
-        return (infra.id, infra.name, infra.location, infra.creator);
+        Project memory p = projects[_id];
+        return (p.id, p.name, p.location, p.owner);
     }
 }
