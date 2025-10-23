@@ -1,46 +1,46 @@
 # BlockInfraX
 
 ## 🧭 Project Description
-**BlockInfraX** is a decentralized blockchain-based infrastructure registry that allows transparent tracking, management, and ownership of public infrastructure projects.  
-By leveraging blockchain, it ensures integrity and immutability of project data, improving accountability in infrastructure development.
+**BlockInfraX** is a decentralized blockchain-based infrastructure management system that allows transparent registration and tracking of infrastructure projects.  
+It ensures accountability and trust among contractors, agencies, and citizens by recording immutable project data on the blockchain.
 
 ---
 
 ## 🎯 Project Vision
-To revolutionize how infrastructure projects are recorded and managed by providing a transparent, tamper-proof, and decentralized platform for citizens, governments, and contractors.
+To build a transparent and tamper-proof digital ecosystem where infrastructure projects are tracked in real-time, ensuring trust, transparency, and corruption-free development.
 
 ---
 
 ## 🚀 Key Features
-- **Project Registration:** Add infrastructure projects with key details like name and location.
-- **Ownership Transfer:** Seamlessly transfer project ownership between entities.
-- **Public Transparency:** Anyone can view project details and verify authenticity on-chain.
-- **Blockchain Trust:** Eliminates manipulation or data loss through decentralized storage.
+- **Project Registration:** Register infrastructure projects with unique ID, name, and location.
+- **Ownership Transfer:** Securely transfer project ownership between authorized users.
+- **Transparent Access:** Anyone can view registered projects on-chain.
+- **Decentralized Storage:** Data is immutable and stored directly on Ethereum.
 
 ---
 
 ## 🔮 Future Scope
-- Integration with IPFS for storing project documents and blueprints.
-- Integration with IoT devices for real-time infrastructure monitoring.
-- Role-based verification for government agencies and contractors.
-- Integration with smart city dashboards and public APIs.
+- Integration with **IPFS** for project documentation and blueprints.
+- **Role-based Access Control** for government authorities and contractors.
+- **IoT Integration** for live infrastructure monitoring.
+- **Web DApp Interface** for user-friendly interactions.
 
 ---
 
 ## 🧠 Smart Contract Functions
-1. `addInfrastructure(string _name, string _location)` — Register a new infrastructure project.  
+1. `registerProject(string _name, string _location)` — Register a new infrastructure project.  
 2. `transferOwnership(uint256 _id, address _newOwner)` — Transfer project ownership.  
-3. `getInfrastructure(uint256 _id)` — Retrieve full project details.
+3. `getProject(uint256 _id)` — Retrieve details of a registered project.  
+
 ---
 
-## Contract Adress: 0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47
-<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/9d894a85-4512-4e79-b536-7751084c3eb1" />
+## Contract Address: 0x957D5A343d759012605BD2A9E013CCd28a9f53b0
+<img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/1f8885b4-faf9-4adb-b48a-fdffd4946ab7" />
+
 ---
 
 ## 🛠️ Setup & Deployment
 
-### 1️⃣ Install dependencies
+### 1️⃣ Install Dependencies
 ```bash
 npm install
-
----
