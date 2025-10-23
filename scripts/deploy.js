@@ -5,7 +5,7 @@ async function main() {
   const blockInfraX = await BlockInfraX.deploy();
   await blockInfraX.deployed();
 
-  console.log(`✅ BlockInfraX deployed successfully to: ${blockInfraX.address}`);
+  console.log(`✅ BlockInfraX deployed successfully at: ${blockInfraX.address}`);
 }
 
 main()
