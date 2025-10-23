@@ -1,0 +1,26 @@
+{
+  "name": "blockinfrax",
+  "version": "1.0.0",
+  "description": "BlockInfraX - A decentralized infrastructure registry for tracking public projects on blockchain.",
+  "main": "hardhat.config.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network sepolia"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "hardhat",
+    "blockchain",
+    "infrastructure"
+  ],
+  "author": "Mriganka Shekhar Barman",
+  "license": "MIT",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.7.0",
+    "hardhat": "^2.22.0"
+  }
+}
