@@ -39,3 +39,7 @@ To revolutionize how infrastructure projects are recorded and managed by providi
 ### 1️⃣ Install dependencies
 ```bash
 npm install
+
+---
+
+## Contract Adress: 0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47
