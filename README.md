@@ -31,7 +31,10 @@ To revolutionize how infrastructure projects are recorded and managed by providi
 1. `addInfrastructure(string _name, string _location)` — Register a new infrastructure project.  
 2. `transferOwnership(uint256 _id, address _newOwner)` — Transfer project ownership.  
 3. `getInfrastructure(uint256 _id)` — Retrieve full project details.
+---
 
+## Contract Adress: 0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47
+<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/9d894a85-4512-4e79-b536-7751084c3eb1" />
 ---
 
 ## 🛠️ Setup & Deployment
@@ -41,6 +44,3 @@ To revolutionize how infrastructure projects are recorded and managed by providi
 npm install
 
 ---
-
-## Contract Adress: 0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47
-<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/9d894a85-4512-4e79-b536-7751084c3eb1" />
